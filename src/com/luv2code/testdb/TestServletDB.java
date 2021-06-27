@@ -29,8 +29,8 @@ public class TestServletDB extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String user = "hbstudent";
-		String pass = "hbstudent";
+		String user = "springstudent";
+		String pass = "springstudent";
 		
 		String jdbcURL = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false";
 		String driver = "com.mysql.jdbc.Driver";
@@ -41,7 +41,7 @@ public class TestServletDB extends HttpServlet {
 			out.println("Connecting to the DB....");
 			
 			Class.forName(driver);
-			Connection con = DriverManager.getConnection(jdbcURL, user, pass);
+			Connection con = DriverManager.getConnection(jdbcURL);
 			out.println("Connection successful....");
 			con.close();
 			
